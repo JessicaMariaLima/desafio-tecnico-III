@@ -1,0 +1,43 @@
+<mat-toolbar color= "primary">
+  <span>Cadastro de Pacientes</span>
+
+</mat-toolbar>
+
+<mat-card class= "example-card" appearance="outlined">
+
+<table mat-table [dataSource]="patientsDatasource" class="mat-elevation-z8">
+
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- cpf Column -->
+  <ng-container matColumnDef="cpf">
+    <th mat-header-cell *matHeaderCellDef> CPF </th>
+    <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+  </ng-container>
+
+  <!-- Birth Date Column -->
+  <ng-container matColumnDef="birthDate">
+    <th mat-header-cell *matHeaderCellDef> Birth Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.birthDate}} </td>
+  </ng-container>
+
+  <!-- Create At Column -->
+  <ng-container matColumnDef="createAt">
+    <th mat-header-cell *matHeaderCellDef> Create At </th>
+    <td mat-cell *matCellDef="let element"> {{element.createAt}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</mat-card>

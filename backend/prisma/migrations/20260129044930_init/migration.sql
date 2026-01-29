@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "Exam" ALTER COLUMN "examDate" SET DATA TYPE TEXT;
+
+-- AlterTable
+ALTER TABLE "Patient" ALTER COLUMN "birthDate" SET DATA TYPE TEXT;
